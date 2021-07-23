@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ExpressFrontend"
+    }
+  },
+  "defaultProject": "ExpressFrontend",
+  "cli": {
+    "analytics": "5c52b3b0-f078-4f8b-85cb-9a4ed9bc1cae"
+  }
 }
