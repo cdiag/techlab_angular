@@ -1,13 +1,35 @@
+<h2 style="text-align: center">CDI BOOK LIST</h2>
+
+<div style="float: left">
+  <button (click)="loadBooks()">Load</button>
+</div>
+
+<div style="float: right">
+  <label>Author: </label>
+  <input type="text" [(ngModel)]="author">
+  <label>Title: </label>
+  <input type="text" [(ngModel)]="title">
+  <button (click)="addBook()">Add Book</button>
+</div>
+
 <table>
   <tr>
     <th>ID</th>
     <th>Author</th>
     <th>Title</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <tr *ngFor="let book of books">
     <td>{{book._id}}</td>
-    <td>{{book.author}}</td>
-    <td>{{book.title}}</td>
+    <td><input type="text" [(ngModel)]="book.author"></td>
+    <td><input type="text" [(ngModel)]="book.title"></td>
+    <th>
+      <button (click)="updateBook(book)">Update</button>
+    </th>
+    <th>
+      <button (click)="deleteBook(book)">Delete</button>
+    </th>
   </tr>
 </table>
